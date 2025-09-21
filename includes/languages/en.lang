@@ -1,0 +1,117 @@
+# If you want to move down the line, please use \n. e.g: Sagor.
+# After changed, you have to restart the bot to use.
+# Put the # character at the beginning of each sentence if you don't want the code to run those lines. 
+# Thanks to https://www.facebook.com/duong.than.net for translate to English!
+
+# Sagor.js 
+
+sagor.newVersionDetected=𝐘𝐨𝐮 𝐚𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 %1, 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐢𝐬 %2. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐮𝐩𝐝𝐚𝐭𝐞 𝐭𝐨 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐨𝐟 𝐟𝐨𝐫 𝐛𝐞𝐭𝐭𝐞𝐫 𝐛𝐨𝐭 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞. 𝐅𝐨𝐫 𝐮𝐩𝐝𝐚𝐭𝐞 𝐭𝐲𝐩𝐞 𝐢𝐧 𝐜𝐨𝐧𝐬𝐨𝐥𝐞/𝐜𝐦𝐝: 𝐧𝐨𝐝𝐞 𝐮𝐩𝐝𝐚𝐭𝐞
+sagor.errorFormat=Malformed module!
+sagor.nameExist=Module's name is similar to another module!
+sagor.notFoundLanguage=NOT SUPPORT YOUR LANGUAGE--> %1 
+sagor.notFoundPackage=Can't find package %1 support for module %2, installing...
+sagor.cantInstallPackage=Can't install package %1 for module %2, error: %3
+sagor.loadedPackage=Installed whole package successfully for module %1
+sagor.loadedConfig=Installed config successfully for module %1
+sagor.cantLoadConfig=Can't install config of module %1, error: %2
+sagor.cantOnload=Can't launch setup of module %1, error: %1
+sagor.successLoadModule=Successfully installed module %1
+sagor.failLoadModule=Can't install module %1, error: %2
+sagor.finishLoadModule=Installed %1 module commands and %2 module events successfully 
+sagor.foundPathAppstate=Found appstate file now logging in...
+sagor.notFoundPathAppstate=Error can't find appstate file maybe file is malformed!
+sagor.checkListGban=Checking global ban list...
+sagor.banDevice=𝚈𝚘𝚞𝚛 𝚍𝚎𝚟𝚒𝚌𝚎 𝚑𝚊𝚟𝚎 𝚋𝚎𝚎𝚗 𝚋𝚊𝚗𝚗𝚎𝚍 𝚏𝚛𝚘𝚖 𝚂𝚊𝚐𝚘𝚛𝚙𝚛𝚘𝚓𝚎𝚌𝚝, 𝚙𝚕𝚎𝚊𝚜𝚎 𝚌𝚘𝚗𝚝𝚊𝚌𝚝 𝚝𝚘 𝚏𝚊𝚌𝚎𝚋𝚘𝚘𝚔 https://www.facebook.com/JAHIDUL.ISLAM.404 𝚝𝚘 𝚔𝚗𝚘𝚠 𝚖𝚘𝚛𝚎 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚘𝚛 𝚊𝚜𝚔𝚒𝚗𝚐 𝚏𝚘𝚛 𝚞𝚗𝚋𝚊𝚗 𝚔𝚎𝚢, 𝚒𝚏 𝚢𝚘𝚞 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚑𝚊𝚟𝚎 𝚞𝚗𝚋𝚊𝚗 𝚔𝚎𝚢, 𝚙𝚕𝚎𝚊𝚜𝚎 𝚏𝚒𝚕𝚕 𝚒𝚝 𝚋𝚎𝚕𝚘𝚠.
+sagor.keyNotSameFormat=Wrong format, code must contain 6 number.
+sagor.codeInputExpired=Your code is wrong or out of date.
+sagor.unbanDeviceSuccess=Your device are unban now, please restart to use.
+sagor.userBanned=You had been banned from Priyanshproject when %1 with reason: %2. Please contact to facebook https://fb.me/JAHIDUL.ISLAM.404 to have more information!
+sagor.finishCheckListGban=Checked global ban list
+sagor.handleListenError=handleListene has occurred some unexpected errorr, error : %1
+sagor.warningSourceCode=DETECTED THAT SOURCE CODE'S STRUCTURE HAD BEEN CHANGED , STOP NOW!
+sagor.refreshListen=Refreshed handleListener...
+sagor.successConnectDatabase=Connected to database successfully!
+sagor.failConnectDatabase=Failed to connect to database, error: %1
+
+# includes/listen.js
+
+listen.startLoadEnvironment=Proceed to load the environment variable ...
+listen.loadedEnvironmentThread=Loaded thread environment variable successfully 
+listen.loadedEnvironmentUser=Loaded user environment variable successfully 
+listen.successLoadEnvironment=Loaded environment variable successfully 
+listen.failLoadEnvironment=Can't load environment variable, error: %1
+
+# includes/controller/currencies.js
+
+currencies.needObjectOrArray=Have to be an Array or an Object or maybe both
+currencies.needObject=Have to be an Object
+currencies.needNumber= Have to be an number
+
+# includes/controller/threads.js
+
+threads.needObjectOrArray=Have to be an Array or an Object or maybe both
+threads.needObject=Have to be an Object 
+
+# includes/controller/users.js
+
+users.needObjectOrArray=𝙷𝚊𝚟𝚎 𝚝𝚘 𝚋𝚎 𝚊𝚗 𝙰𝚛𝚛𝚊𝚢 𝚘𝚛 𝚊𝚗 𝙾𝚋𝚓𝚎𝚌𝚝 𝚘𝚛 𝚖𝚊𝚢𝚋𝚎 𝚋𝚘𝚝𝚑
+users.needObject=Have to be an Object
+
+# includes/handle/handleCommand.js
+
+handleCommand.userBanned=⛔️~𝚢𝚘𝚞 𝚊𝚛𝚎 𝚋𝚊𝚗𝚗𝚎𝚍🤭!~🚫\n%1\n%2\n𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝙱𝟶𝚃 𝙾𝚠𝚗𝚎𝚛 𝚂𝙰𝙶𝙾𝚁  🖤 𝙵𝚘𝚛 𝚄𝚗𝚋𝚊𝚗 ⚠️
+handleCommand.threadBanned=⛔️𝚈𝚘𝚞𝚛 𝚃𝚑𝚛𝚎𝚊𝚍/𝙱𝚘𝚡/𝙶𝚛𝚘𝚞𝚙 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝙱𝚊𝚗𝚗𝚎𝚍!⛔️\n%1\n%2 𝙿𝚕𝚎𝚊𝚜𝚎 𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝙾𝚠𝚗𝚎𝚛 𝚂𝚊𝚐𝚘𝚛 𝙵𝚘𝚛 𝚄𝚗𝚋𝚊𝚗 ⚠️
+handleCommand.commandNotExist=𝚃𝚑𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚢𝚘𝚞 𝚊𝚛𝚎 𝚞𝚜𝚒𝚗𝚐 𝚍𝚘𝚎𝚜 𝚗𝚘𝚝 𝚎𝚡𝚒𝚜𝚝, 𝚝𝚢𝚙𝚎 ^𝚑𝚎𝚕𝚙 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 "%1"
+handleCommand.commandThreadBanned=𝚈𝚘𝚞𝚛 𝚝𝚑𝚛𝚎𝚊𝚍 𝚒𝚜 𝚞𝚗𝚊𝚋𝚕𝚎 𝚝𝚘 𝚞𝚜𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 "%1"
+handleCommand.commandUserBanned=𝚈𝚘𝚞 𝚊𝚛𝚎 𝚞𝚗𝚊𝚋𝚕𝚎 𝚝𝚘 𝚞𝚜𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 "%1"
+handleCommand.threadNotAllowNSFW=𝚈𝚘𝚞𝚛 𝚝𝚑𝚛𝚎𝚊𝚍 𝚒𝚜 𝚗𝚘𝚝 𝚊𝚕𝚕𝚘𝚠𝚎𝚍 𝚝𝚘 𝚞𝚜𝚎 𝙽𝚂𝙵𝚆 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜
+handleCommand.cantGetInfoThread=𝙲𝚊𝚗'𝚝 𝚐𝚎𝚝 𝚢𝚘𝚞𝚛 𝚝𝚑𝚛𝚎𝚊𝚍'𝚜 𝚒𝚗𝚏𝚘, 𝚎𝚛𝚛𝚘𝚛: %1
+handleCommand.permssionNotEnough=𝚢𝚘𝚞 𝚑𝚊𝚟𝚎 𝚗𝚘 𝚙𝚎𝚛𝚖𝚒𝚜𝚜𝚒𝚘𝚗 𝚝𝚘 𝚞𝚜𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 "%1" 𝚘𝚗𝚕𝚢 𝚘𝚠𝚗𝚎𝚛 𝚜𝚊𝚐𝚘𝚛
+handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
+handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
+handleCommand.commandError=Having some unexpected error when using command %1, error: %2
+
+# includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
+
+# includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=new thread: %1
+handleCreateDatabase.newUser=new user %1
+
+# includes/handle/handleEvent.js
+
+handleEvent.executeEvent=[ %1 ] Event was executed: %2 at thread: %3 | Processing time: %4ms
+handleEvent.eventError=Having some error when executing event %1, error: %12
+
+# includes/handle/handleReaction.js
+
+handleReaction.missingValue=Missing value to respond your problem
+handleReaction.executeError=Having some error when responding to your problem, error: %1
+
+# includes/handle/handleReply.js
+
+handleReply.missingValue=Missing value to respond your problem
+handleReply.executeError=Having some error when responding your problem, error: %1
+
+# includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=Having some error when schedule at module %1, error: %2
+
+# utils/index.js
+
+utils.throwError=ℹ️ [!] 𝚈𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙺𝚊𝚊𝚖 𝙽𝚊𝚑𝚒 𝙺𝚊𝚛 𝚁𝚊𝚑𝚊 𝙺𝚘𝚒 𝙳𝚘𝚜𝚛𝚊 𝚃𝚛𝚢 𝙺𝚊𝚛𝚘, %1help %2 𝚄𝚜𝚎 𝙵𝚘𝚛 𝙼𝚘𝚛𝚎 𝚞𝚜𝚊𝚐𝚎 😉 ℹ️
+
+# updater.js
+
+updater.latestVersion=You are using the latest version
+updater.cantFindVersion=You are using an undefined version (%1), please check your package.json file again
+updater.newVersions=There are %1 new versions to update, starting to update...
+updater.updateSuccess=Update successfully%1
+updater.configChanged=The %1 has been changed, please check your config.json file again
+updater.installingPackages=Installing dependencies for bot...
+updater.installSuccess=Installed dependencies successfully, restart the bot to use the new version
+updater.backupSuccess=Successfully backed up changed files, see in the %1 folder
+updater.restartToApply=. Restart the bot to apply the new version
+updater.skipFile=There is a new version of the %1 file, but you have skipped this file during the update process with the comment %2 in this file

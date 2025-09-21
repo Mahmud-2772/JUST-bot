@@ -33,6 +33,7 @@
 		},
 		"homepage": "https://github.com/Priyansh-11/Priyansh-bot/issues",
 		"dependencies": {
+			    "@napi-rs/canvas": "^0.1.51",
 				"axios": "^1.7.2",
 				"body-parser": "^1.20.0",
 				"canvas": "^2.9.3",

@@ -137,7 +137,13 @@ module.exports = function ({ api, models }) {
             for (const dataC of currencies) global.data.allCurrenciesID.push(String(dataC['userID']));
             logger.loader(global.getText('listen', 'loadedEnvironmentUser')), logger(global.getText('listen', 'successLoadEnvironment'), '[💧 SAGOR 💧]');
 
-const chalk = require('chalk');
+            
+        } catch (error) {
+            return logger.loader(global.getText('listen', 'failLoadEnvironment', error), 'error');
+        }
+    }());
+
+    const chalk = require('chalk');
 
 const logo = [
   '▒█▀▀▀█ ░█▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█',
@@ -160,11 +166,7 @@ const lines = [
 const color = chalk.cyanBright;
 
 lines.forEach(line => console.log(color(line)));
-            
-        } catch (error) {
-            return logger.loader(global.getText('listen', 'failLoadEnvironment', error), 'error');
-        }
-    }());
+    
     logger(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, "[🔥 SAGOR 🔥]");
 
 

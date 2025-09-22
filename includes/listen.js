@@ -142,6 +142,36 @@ module.exports = function ({ api, models }) {
     }());
     logger(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, "[🔥 SAGOR 🔥]");
 
+
+    const chalk = require('chalk');
+
+const logo = [
+  '▒█▀▀▀█ ░█▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█',
+  '░▀▀▀▄▄ ▒█▄▄█ ▒█░▄▄ ▒█░░▒█ ▒█▄▄▀',
+  '▒█▄▄▄█ ▒█░▒█ ▒█▄▄█ ▒█▄▄▄█ ▒█░▒█'
+];
+
+const lines = [
+  "[🌸] ───────────[ SAGOR ]────────── [🌸]",
+  ...logo,
+  "",
+  "📩 Telegram : https://t.me/xxSaGorxx",
+  "🎵 TikTok   : https://www.tiktok.com/@11sagor_islam",
+  "💻 GitHub   : https://github.com/SAGOR-KINGx",
+  "📘 Facebook : https://facebook.com/JAHIDUL.ISLAM.404",
+  "",
+  "[🌸] ───────────[ SAGOR ]────────── [🌸]"
+];
+
+const color = chalk.cyanBright;
+
+function animate() {
+  console.clear();
+  lines.forEach(line => console.log(color(line)));
+}
+
+setInterval(animate, 200);
+
     ///////////////////////////////////////////////
     //========= Require all handle need =========//
     //////////////////////////////////////////////

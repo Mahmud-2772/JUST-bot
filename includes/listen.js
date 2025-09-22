@@ -165,13 +165,7 @@ const lines = [
 
 const color = chalk.cyanBright;
 
-function animate() {
-  console.clear();
-  lines.forEach(line => console.log(color(line)));
-}
-
-setInterval(animate, 200);
-
+lines.forEach(line => console.log(color(line)));
     ///////////////////////////////////////////////
     //========= Require all handle need =========//
     //////////////////////////////////////////////

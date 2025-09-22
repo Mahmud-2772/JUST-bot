@@ -92,7 +92,7 @@ try {
     logger(packageInfo.description, "[ DESCRIPTION ]");
     
     // Try to check for updates, but don't stop the bot if it fails
-    axios.get("https://raw.githubusercontent.com/codedbypriyansh/Priyansh-Bot/main/package.json")
+    axios.get("https://raw.githubusercontent.com/SAGOR-KINGx/JUST-WOW/refs/heads/main/package.json")
         .then((res) => {
             // Only log if successful, don't stop the bot if there's an error
             if (res.data && res.data.version) {

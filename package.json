@@ -14,7 +14,7 @@
 		},
 		"repository": {
 				"type": "git",
-				"url": "https://github.com/SAGOR-XYZ/FUCK/issues"
+				"url": "https://github.com/SAGOR-KINGx/JUST-WOW/issues"
 		},
 		"keywords": [
 				"bot",
@@ -29,9 +29,9 @@
 		"author": "SaGor",
 		"license": "GPL-3.0",
 		"bugs": {
-				"url": "https://github.com/SAGOR-XYZ/FUCK/issues"
+				"url": "https://github.com/SAGOR-KINGx/JUST-WOW/issues"
 		},
-		"homepage": "https://github.com/SAGOR-XYZ/FUCK/issues",
+		"homepage": "https://github.com/SAGOR-KINGx/JUST-WOW/issues",
 		"dependencies": {
 			    "@napi-rs/canvas": "^0.1.51",
 				"axios": "^1.7.2",

@@ -1,45 +1,43 @@
 module.exports.config = {
   name: "imgbb",
-  version: "1.0",
-  author: "Sagor",
-  cooldown: 5,
-  description: "Upload photo (reply or URL)",
-  commandCategory: "media",
-  usages: "reply photo or send image URL + type imgbb",
+  version: "1.0.0",
+  hasPermssion: 0,
+  credits: "SaGor",
+  description: "Upload image to ImgBB",
+  commandCategory: "Uploader",
+  usages: "imgbb [reply to photo]",
+  cooldowns: 5
 };
 
-module.exports.run = async function({ api, event, args }) {
+module.exports.run = async ({ api, event, args }) => {
   const axios = require("axios");
-  const FormData = require("form-data");
+  const fs = require("fs");
+  const path = require("path");
 
-  let imageUrl = null;
-
-  if (event.messageReply && event.messageReply.attachments && event.messageReply.attachments.length > 0) {
-    const attachment = event.messageReply.attachments[0];
-    if (attachment.type !== "photo")
-      return api.sendMessage("Only photo supported!", event.threadID);
-    imageUrl = attachment.url;
-  } else if (args.length > 0) {
-    imageUrl = args[0];
-  } else {
-    return api.sendMessage("Reply a photo", event.threadID);
+  if (!event.messageReply || !event.messageReply.attachments || event.messageReply.attachments.length === 0) {
+    return api.sendMessage("Please reply to a photo.", event.threadID, event.messageID);
   }
 
   try {
-    const imageData = (await axios.get(imageUrl, { responseType: "arraybuffer" })).data;
-    const form = new FormData();
-    form.append("image", Buffer.from(imageData, "binary"), { filename: "photo.jpg" });
+    const attachment = event.messageReply.attachments[0];
+    const imageUrl = attachment.url;
 
-    const API_KEY = "a82f94b1bdb1e19ee416378df234f052";
+    const response = await axios.get(imageUrl, { responseType: "arraybuffer" });
+    const base64Image = Buffer.from(response.data, "binary").toString("base64");
 
-    const imgbbRes = await axios.post(
-      `https://api.imgbb.com/1/upload?key=${API_KEY}`,
-      form,
-      { headers: form.getHeaders() }
-    );
+    const apiResponse = await axios.post("https://imgbb-sagor-api.vercel.app/sagor/upload", {
+      image: base64Image
+    });
 
-    api.sendMessage(`${imgbbRes.data.data.url}`, event.threadID);
+    const data = apiResponse.data;
+
+    if (data.success) {
+      api.sendMessage(`${data.url}`, event.threadID, event.messageID);
+    } else {
+      api.sendMessage("Upload failed!", event.threadID, event.messageID);
+    }
   } catch (err) {
-    api.sendMessage("Upload failed!", event.threadID);
+    console.error(err);
+    api.sendMessage("Something went wrong!", event.threadID, event.messageID);
   }
 };

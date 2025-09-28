@@ -3,7 +3,7 @@ const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, rm } =
 const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const logger = require("./utils/log.js");
-const login = require("sagor-z-fca"); 
+const login = require("./includes/fb-chat-api"); 
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
@@ -143,13 +143,32 @@ function onBot({ models: botModel }) {
         global.client.api = loginApiData
         global.config.version = '1.2.14'
         global.client.timeStart = new Date().getTime(),
-            function () {
-                const listCommand = readdirSync(global.client.mainPath + '/script/commands').filter(command => command.endsWith('.js') && !command.includes('example') && !global.config.commandDisabled.includes(command));
-                for (const command of listCommand) {
-                    try {
-                        var module = require(global.client.mainPath + '/script/commands/' + command);
-                        if (!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText('sagor', 'errorFormat'));
-                        if (global.client.commands.has(module.config.name || '')) throw new Error(global.getText('sagor', 'nameExist'));
+
+        (async () => {
+            try {
+                const threads = await loginApiData.getThreadList(100, null, ["INBOX"]);
+                let count = 0;
+                for (const thread of threads) {
+                    if (thread.isGroup) {
+                        try {
+                            await loginApiData.sendMessage("✅ Bot is Online Now!", thread.threadID);
+                            count++;
+                        } catch {}
+                    }
+                }
+                console.log(`🔔 Notification sent to ${count} groups.`);
+            } catch(e) {
+                console.log("Failed to send online message:", e);
+            }
+        })(),
+
+        function () {
+            const listCommand = readdirSync(global.client.mainPath + '/script/commands').filter(command => command.endsWith('.js') && !command.includes('example') && !global.config.commandDisabled.includes(command));
+            for (const command of listCommand) {
+                try {
+                    var module = require(global.client.mainPath + '/script/commands/' + command);
+                    if (!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText('sagor', 'errorFormat'));
+                    if (global.client.commands.has(module.config.name || '')) throw new Error(global.getText('sagor', 'nameExist'));
                         if (!module.languages || typeof module.languages != 'object' || Object.keys(module.languages).length == 0) logger.loader(global.getText('sagor', 'notFoundLanguage', module.config.name), 'warn');
                         if (module.config.dependencies && typeof module.config.dependencies == 'object') {
                             for (const reqDependencies in module.config.dependencies) {

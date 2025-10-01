@@ -16,7 +16,79 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "YOUR-SAGOR",
+    "BOTNAME": "মুরগীর বাচ্চা",
+    "PREFIX": "#",
+    "ADMINBOT": [
+        "61581502015227",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "NDH": [
+        "61579792988640",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "FCAOption": {
+        "forceLogin": true,
+-",
+    "ADMINBOT": [
+        "61579792988640",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "NDH": [
+        "61579792988640",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "FCAOption": {
+        "forceLogin": true,-",
+    "ADMINBOT": [
+        "61579792988640",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "NDH": [
+        "61579792988640",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
     "PREFIX": "-",
     "ADMINBOT": [
         "61579792988640",
